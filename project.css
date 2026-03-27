@@ -1,0 +1,208 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-image: url("https://images.pexels.com/photos/27982028/pexels-photo-27982028.jpeg");
+    background-size: cover;          /* fill entire screen */
+    background-position: center;     /* center image */
+    background-repeat: no-repeat;    /* no tiling */
+    background-attachment: fixed;    /* cool parallax feel */
+    overflow-x: hidden;
+}
+.bg-blur{
+    position: fixed;
+    inset: 0;
+    background-image: url("https://images.pexels.com/photos/27982028/pexels-photo-27982028.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+.navbar{
+    background-color: darkmagenta;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    overflow: visible;
+}
+
+.navbar a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+    transition: all 0.5s ease;
+}
+.navbar a:hover{
+    background-color:red;
+    border-radius: 6px;
+    transform: scale(1.1);
+}
+.navbar a:active{
+    background-color: green;
+}
+.content{
+    padding: 20px;
+}
+.gm{
+    padding-bottom: 4px;
+    color: yellow;
+}
+.fa-solid{
+    color: black;
+    font-size: 25px;
+}
+.bus{
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 60px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+.bus:hover{
+    transform: scale(1.3);
+}
+
+.content{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+.content a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 35px;
+}
+.content a i{
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.content a:hover{
+    color: blue;
+    transform: scale(1.2)
+}
+@media(max-width:600px){
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .content{
+        gap: 20px;
+        margin-top: 40%;
+    }
+    .content a{
+        width: 40%;
+    }
+}
+.select{
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.select .title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.select label{
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.select input{
+    margin-right: 6px;
+    accent-color: #ff6b00;   /* modern colored radio */
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 40px;
+}
+.menu .field{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+}
+.menu input{
+    padding: 8px 10px;
+    border-radius: 30px;
+    border: 2px solid black;
+    width: 200px;
+}
+.gallery{
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+.gallery img{
+    height: 500px;
+    width: auto;
+    border-radius: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+.gallery img:hover{
+    transform: scale(1.2);
+}
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 100%;
+    color: aqua;
+    justify-content: center;
+}
+.bus-move{
+    display: block;
+    margin-top: 25px;
+    font-size: 32px ;
+    color: darkorange;
+
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+}
+.bus-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    margin-top: 45px;
+}
+.bus-icon i{
+    font-size: 35px;
+    color: black;
+}
+.bus-move{
+    display: inline-block;
+    font-size: 40px;
+    animation: busMoveLR 3s linear infinite alternate;
+}
+@keyframes busSwing{
+    0%{transform: translateX(-150px);}
+    100%{transform: translatX(150px);}
+}
